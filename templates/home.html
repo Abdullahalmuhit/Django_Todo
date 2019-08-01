@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Details</p><hr>
+<table>
+    <thead>
+    <tr>
+        <th>Name </th>
+        <th>Note</th>
+    </tr>
+    </thead>
+{% for data in text %}
+<tr>
+    <td>{{ data.name }}</td>
+    <td>{{ data.write }}</td>
+    <td ><a class="button2" href="/edit/{{ data.id }}">Edit</a>
+        <a href="/delete/{{ data.id }}">Delete</a>
+
+    </td>
+</tr>
+{% endfor %}
+</table>
+<a href="/add_comment/"><button type="submit" class="button2">Add Comment</button></a>
+
+</body>
+</html>

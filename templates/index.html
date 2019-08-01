@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form action="/create">
+    {% csrf_token %}
+<table>
+ <tr>
+    <td>Name: <input type="text" name="name" required></td>
+
+
+  </tr>
+  <tr>
+    <td>Comment: <textarea name="comment"  rows="4" cols="50" required> </textarea></td>
+  </tr>
+    <tr>
+    <td><button type="submit">NoteIt</button></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>
